@@ -14,7 +14,9 @@ export default {
   components: {
     // HelloWorld,
     Activities
-  }/*,
+  }
+  
+  /*,
   data(){
     return{
       activities: [],
@@ -43,6 +45,6 @@ export default {
 }
 </script>
 
-<style>
-  @import './assets/css/styles.css';
+<style lang="scss">
+@import './assets/scss/main.scss';
 </style>

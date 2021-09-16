@@ -1,0 +1,9 @@
+@import 'shared';
+
+#activities{
+    @include flex-row;
+    flex-wrap: wrap;
+    gap:20px 10px;
+    margin-top:100px;
+    margin-bottom:50px;
+}

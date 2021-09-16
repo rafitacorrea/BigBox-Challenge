@@ -1,0 +1,13 @@
+@import 'shared';
+@import 'activities.scss';
+@import 'card.scss';
+
+body{
+    margin:0;
+    @include flex-column;
+}
+#app{
+    @include flex-column;
+    width:80%;
+    height:auto;
+}
