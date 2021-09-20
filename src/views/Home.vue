@@ -2,7 +2,7 @@
     <div id="home">
       <Actividades :page="page"/>
         <nav class="pagination" role="navigation" aria-label="pagination">
-          <back-to-top class="pagination-btt">
+          <back-to-top class="pagination-btt pagination-arrow">
             <a class="pagination-arrow" v-on:click="changePage(page-1)">
               <font-awesome-icon :icon="previous" />
             </a>
@@ -23,7 +23,7 @@
               </back-to-top>
             </ul>
 
-            <back-to-top class="pagination-btt">
+            <back-to-top class="pagination-btt pagination-arrow">
               <a class="pagination-arrow" v-on:click="changePage(page+1)">
               <font-awesome-icon :icon="next" />
               </a>
@@ -69,9 +69,7 @@ export default {
         .get(`https://json-biglifeapp.herokuapp.com/activity`, {params})
           .then(res =>{
             this.activities = res.data;
-            console.log('paginacion:')
             this.pages = parseInt(this.activities.length / 9);
-            console.log(this.pages)
           })
           .catch(e => console.log(e))
     }

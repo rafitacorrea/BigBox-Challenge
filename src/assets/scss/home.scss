@@ -61,7 +61,6 @@
         margin: 0 20px;
         font-size: 35px;
         transition: all 0.3s ease-in-out;
-        position:inherit;
     }
     &-arrow:hover{
         scale:1.1;
@@ -69,6 +68,8 @@
     &-btt{
         display:inline-block;
         position:static;  
+
     }
+
 }
 

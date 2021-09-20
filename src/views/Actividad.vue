@@ -7,7 +7,7 @@
       </div>
         <ActividadInfo :image="activityDescription.image[0]" :title="activity.title" :text="activityDescription.description" :province="activityDescription.locations[0].province" :participants="activityDescription.participants" :points="activity.points" />
         <Benefits :description="activityDescription.description" :benefits="activityDescription.benefits" :small_print="activityDescription.small_print"/>
-        <Similares :location="activityDescription.locations[0].province"/>
+        <Similares :activity_type="activity.activity_type"/>
     </div>
 </template>
 
