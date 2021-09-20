@@ -1,0 +1,23 @@
+@import 'shared';
+
+#reglas{
+    font-family: $main-font;
+    width:565px;
+    padding-left:10px;
+    align-self: flex-start;
+    margin-top:50px;
+}
+.reglas-title{
+    color:$main-color;
+    font-size:22px;
+    font-weight:700;
+    &-icon{
+        margin-right:10px;
+        font-size:30px;
+    }
+}
+.reglas-text{
+    color:$secondary-color;
+    font-size:18px;
+    font-weight:300;
+}

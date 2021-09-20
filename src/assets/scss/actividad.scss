@@ -1,0 +1,14 @@
+@import 'shared';
+
+#actividad{
+    @include flex-column;
+    margin-top:100px;
+}
+.actividad-header{
+    @include flex-row;
+    justify-content: space-around;
+}
+.imagen{
+    width: 100%;
+    height: auto;
+}
