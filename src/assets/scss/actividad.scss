@@ -3,6 +3,7 @@
 #actividad{
     @include flex-column;
     margin-top:100px;
+    width:80%;
 }
 .actividad-header{
     @include flex-row;
@@ -11,4 +12,11 @@
 .imagen{
     width: 100%;
     height: auto;
+}
+.actividad-arrow{
+    color:$secondary-color;
+    font-size:32px;
+    width:100%;
+    margin-bottom:30px;
+    align-content: flex-start;
 }

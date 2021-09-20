@@ -1,19 +1,18 @@
 <template>
   <div id="app">
-    <Paginacion/>
+    <router-view/>
   </div>
+  
 </template>
 
 <script>
-//import Actividades from './components/Actividades.vue'
-//import Actividad from './components/Actividad.vue'
-import Paginacion from './components/Paginacion.vue'
+
+
+
 
 export default {
-  name: 'App',
-  components: {
-    Paginacion
-  }
+  
+  name: 'App'
 
 }
 </script>

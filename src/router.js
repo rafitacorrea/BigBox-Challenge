@@ -1,19 +1,19 @@
 import Vue from "vue";
 import VueRouter from 'vue-router'
-import Actividades from './components/Actividades'
-import Actividad from './components/Actividad'
+import Home from './views/Home'
+import Actividad from './views/Actividad'
     
 
 Vue.use(VueRouter)
 
 const routes = [
     {
-      path: "/Actividades",
+      path: "/actividades",
       name: "Actividades",
-      component: Actividades
+      component: Home
     },
     {
-        path: "/Actividad",
+        path: "/actividades/:id",
         name: "Actividad",
         component: Actividad
       }

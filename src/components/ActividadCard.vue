@@ -26,7 +26,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default {
-    name: 'Card',
+    name: 'ActividadCard',
     components: {FontAwesomeIcon},
     props: {
         image: String,
@@ -35,7 +35,7 @@ export default {
         address: String,
         province: String ,
         description: String, 
-        points: Number 
+        points: Number
     },
   data () {
     return {

@@ -1,8 +1,11 @@
 @import 'shared';
 
+#actividad-info{
+    @include flex-row;
+    width:100%;
+}
 
 .actividad-header{
-
     &-image{
         width: 563px;
         height: 371px;

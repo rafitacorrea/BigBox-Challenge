@@ -1,6 +1,8 @@
 <template>
-    <div id="actividades" >
-      <div v-for="(activity, index) in activities" :key="activity.id">
+    <div id="similares">
+        <h3 class="similares-title">Otras actividades similares:</h3>
+        <div class="similares-cards" >
+         <div v-for="(activity, index) in activities" :key="activity.id">
         <router-link v-bind:to="'/actividades/'+activity.id">
        <ActividadCard :image="activitiesDescription[index].image[0]" :title="activity.title" :address="activitiesDescription[index].locations[0].address" :province="activitiesDescription[index].locations[0].province" :description="activitiesDescription[index].description" :points="activity.points" v-if="activitiesDescription[index].participants != 1" :icon="iconUserFriends"/>
         </router-link>
@@ -8,39 +10,39 @@
        <ActividadCard :image="activitiesDescription[index].image[0]" :title="activity.title" :address="activitiesDescription[index].locations[0].address" :province="activitiesDescription[index].locations[0].province" :description="activitiesDescription[index].description" :points="activity.points" v-if="activitiesDescription[index].participants == 1" :icon="iconUser"/>
         </router-link>
       </div>
+      </div>
     </div>
 </template>
 
 <script>
 import axios from 'axios';
-import ActividadCard from './/ActividadCard';
+import ActividadCard from './ActividadCard';
 import { faUser, faUserFriends } from '@fortawesome/free-solid-svg-icons'
 
-
 export default {
-  name: 'Actividades',
-  components: {
+    name: 'Similares',
+    components: {
     ActividadCard
   },
   props:{
-    page: Number
+    location: String
 
   },
   data(){
     return{
       activities: [],
       activitiesDescription: [],
+      similares: [],
       iconUser: faUser,
       iconUserFriends: faUserFriends
     }
   },
   methods: {
-    getActivities(page){
+    getActivities(){
       axios
-        .get("https://json-biglifeapp.herokuapp.com/activity?_page="+page+"&_limit=9")
+        .get("https://json-biglifeapp.herokuapp.com/activity?_page=1&_limit=4")
           .then(res =>{
             this.activities = res.data;
-            this.activitiesDescription.length = 0;
             this.activities.forEach(a => {
             this.activitiesDescription.push(JSON.parse(a.activity));
             })
@@ -48,13 +50,9 @@ export default {
           .catch(e => console.log(e))
     }
     },
-  watch: {
-    page: function(){
-      this.getActivities(this.page)
-    }
-  },
   mounted(){
     this.getActivities()
   }
 }
+
 </script>

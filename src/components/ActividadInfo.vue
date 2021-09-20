@@ -19,7 +19,6 @@
 </template>
 
 <script>
-//import Benefits from './Benefits'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
